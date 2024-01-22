@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APP</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-dark text-white">
+    <h1 class="text-center my-5">Product Management System</h1>
+    <div class="container mb-4">
+        <!-- inputs To Add Products  -->
+        <div class="w-75 mx-auto mb-5">
+            <div class="form-group mb-3">
+                <label for="proName" class="mb-1">Product Name :</label>
+                <input oninput="validateName()" type="text" class="form-control" name="" id="proName">
+                <p class="text-danger fs-6 text-center d-none" id="wrongName">Product Name Must Starts With Capital Char
+                    !</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="proPrice" class="mb-1">Product Price :</label>
+                <input oninput="validatePrice()" type="number" class="form-control" name="" id="proPrice">
+                <p class="text-danger fs-6 text-center d-none" id="wrongPrice">product price in range (1000 - 10000) !
+                </p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="proModel" class="mb-1">Product Model :</label>
+                <input oninput="validateModel()" type="text" class="form-control" name="" id="proModel">
+                <p class="text-danger fs-6 text-center d-none" id="wrongModel">product model must be (tv -mobile-
+                    labtop)
+                    !
+                </p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="proDesc" class="mb-1">Product Description :</label>
+                <textarea oninput="validateDesc()" type="text" class="form-control" name="" id="proDesc"></textarea>
+                <p class="text-danger fs-6 text-center d-none" id="wrongDesc">product model must be in range (1000 -
+                    10000) char !
+                </p>
+            </div>
+            <button onclick="add()" id="addBtn" class="btn btn-success ms-auto d-block addBtn">Add Product</button>
+            <button onclick="Update()" id="UpBtn" class="btn btn-warning ms-auto d-none UpBtn">Update
+                Product</button>
+        </div>
+
+        <label for="search" class="mb-2 searchLabel">Search <span>.</span><span>.</span><span>.</span></label>
+        <input type="search" oninput="searching(this.value)" id="search" class="form-control">
+
+        <!-- Display Products -->
+        <div class="w-100  py-5">
+            <table class="table table-dark table-hover text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Model</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+
+                <tbody id="myData">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    
+    <!-- Scripts Links -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

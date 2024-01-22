@@ -1,0 +1,33 @@
+/* Global */
+body {
+    background-color: #000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+.searchLabel {
+    letter-spacing: 1.5px;
+}
+
+.searchLabel span {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+}
+
+
+.null-search {
+    padding: 20px;
+    font-size: 1.4rem;
+    color: darkgoldenrod;
+}
+
+
+input:focus,
+textarea:focus {
+    box-shadow: none !important;
+}
